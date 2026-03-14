@@ -77,8 +77,8 @@ def policy_improvement(
 def policy_iteration(
     gamma: float = 0.9,
     theta: float = 1e-4
-) -> Tuple[Dict[State, float], Dict[State, Action]]:
-    # Initial policy: always move Right
+):
+    # Initial policy: always move right
     pi: Dict[State, Action] = {}
     for s in all_states():
         if not GridWorld.is_terminal(s):
